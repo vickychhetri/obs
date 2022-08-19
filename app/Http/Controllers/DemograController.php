@@ -87,13 +87,13 @@ class DemograController extends Controller
     $database_agent->UserID=session()->get('userid');
 
     $res=$database_agent->save();
-    //     if($res==1){
-    //         $Testseq1=Testseq::where('Sequence','=','1')
-    //         ->get()
-    //         ->first();
-    // $obj=new AttempttestController();  //object to handle function
-    // $obj->TestLocked($Testseq1->TestID,'1','1'); //update
-    // }
+        if($res==1){
+            $Testseq1=Testseq::where('Sequence','=','1')
+            ->get()
+            ->first();
+    $obj=new AttempttestController();  //object to handle function
+    $obj->TestLocked($Testseq1->TestID,'1','1'); //update
+    }
     
     //after saving demographic data open Pre Course
     //
