@@ -144,12 +144,12 @@ class LoginuserController extends Controller
                 return redirect('/UDashboard')->with('message', 'Welcome');
                   
             }else {
-                return redirect()->back()->with('Error', 'Error : Invalid Login !');
+                //return redirect()->back()->with('Error', 'Error : Invalid Login !');
             }
            
                 } catch (QueryException $e) {    
                     print($e);
-            return redirect()->back()->with('Error', 'Error : Invalid Login !');
+            //return redirect()->back()->with('Error', 'Error : Invalid Login !');
             }
         
     }
