@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/learnqsx/public_html/
+    - export DEPLOYPATH=/home/vikedise/obstetricalemergencies.in/
     - /bin/cp -r * $DEPLOYPATH
