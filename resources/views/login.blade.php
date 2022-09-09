@@ -21,6 +21,25 @@
             content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies."
         />
 
+        <!-- Primary Meta Tags -->
+        <title>Obstetric Emergencies | Learning Platform</title>
+        <meta name="title" content="Obstetric Emergencies | Learning Platform">
+        <meta name="description" content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://obstetricalemergencies.in/">
+        <meta property="og:title" content="Obstetric Emergencies | Learning Platform">
+        <meta property="og:description" content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
+        <meta property="og:image" content="https://obstetricalemergencies.in/images/mother.png">
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://obstetricalemergencies.in/">
+        <meta property="twitter:title" content="Obstetric Emergencies | Learning Platform">
+        <meta property="twitter:description" content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
+        <meta property="twitter:image" content="https://obstetricalemergencies.in/images/mother.png">
+        
         <script>
             addEventListener(
                 "load",
