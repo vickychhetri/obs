@@ -6,7 +6,7 @@ use App\Models\adminuser;
 use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Database\QueryException;
-
+use App\Models\loginuser;
 
 class AdminuserController extends Controller
 {
@@ -17,11 +17,13 @@ class AdminuserController extends Controller
      */
     public function index()
     {
+        
         return view('Admin.AdminLogin');
     }
     public function openDashboard()
     {
-        return view('Admin.dashboard');
+        $data=loginuser::count();
+        return view('Admin.dashboard')->with('U',$data);;
     }
     public function checkAdminlogin(Request $request){
         

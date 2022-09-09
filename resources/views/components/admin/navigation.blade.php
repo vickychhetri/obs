@@ -1,9 +1,9 @@
 <nav id="sidebar">
             <div class="sidebar-header">
                 <h1>
-                    <a href="/">{{env("APPLICATION_NAME")}}</a>
+                    <a href="/Dashboard">{{env("APPLICATION_NAME")}}</a>
                 </h1>
-                <span>A</span>
+                <span>OBS</span>
             </div>
             <div class="profile-bg"></div>
             <ul class="list-unstyled components">

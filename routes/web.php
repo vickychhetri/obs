@@ -35,6 +35,9 @@ Route::group(["middleware" => ["Adminlogchecker"]], function(){
     Route::post('/Add/Chapter', 'App\Http\Controllers\ChapterController@store');
 
     Route::get('/Dashboard', function () {
+
+    
+
         return view('Admin.dashboard');
     });    
 

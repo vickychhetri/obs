@@ -191,9 +191,7 @@ div.h4 {
             </div>
         </div>
 
-@foreach($TestReportDataset["QuestionTestReport"] as $singleQuestion) 
-{{ $singleQuestion["Question"]}}  : {{ $singleQuestion["SelectedOptionAnswer"]}} {{ $singleQuestion["AnswerCorrect"]}}  <br/>  <br/> <br/>
-@endforeach
+ 
 
 
     </div>

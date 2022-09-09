@@ -100,10 +100,10 @@ class DemograController extends Controller
     
         } catch (QueryException $e) {    
             print($e);
-   // return redirect()->back()->with('Error', 'Error : Try Again !');
+    return redirect()->back()->with('Error', 'Error : Try Again !');
     }
 // open module
-    //return redirect('/User/list-Test')->with('message', 'Start Test Now');
+    return redirect('/User/list-Test')->with('message', 'Start Test Now');
   
     }
 

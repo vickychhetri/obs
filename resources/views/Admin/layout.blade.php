@@ -6,7 +6,7 @@
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <meta name="keywords" content="Learn Virtual, Amita web, PHD Data " />
+    <meta name="keywords" content="obstetrical, emergencies , obstetricalemergencies" />
     <script>
     addEventListener("load", function() {
         setTimeout(hideURLbar, 0);
@@ -57,13 +57,7 @@
                             <i class="fas fa-bars"></i>
                         </button>
                     </div>
-                    <!-- Search-from -->
-                    <form action="#" method="post" class="form-inline mx-auto search-form">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                            required="">
-                        <button class="btn btn-style my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    <!--// Search-from -->
+                  
                     <a class="nav-link" href="/noaccess2" id="navbarDropdown3" role="button" style="float: right;">
                         <i class="far fa-user" style="color:blue;"></i> Logout
                     </a>

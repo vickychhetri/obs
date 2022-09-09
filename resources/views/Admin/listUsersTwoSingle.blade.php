@@ -76,12 +76,11 @@ if($OpenButton=="1"){
             </tr>
             <tr>
                 <td>
-                    <!--<a href="/User/Demographic/{{$UserIdetification->UserID}}" class="btn btn-success"> Demographics <i-->
-                    <!--        style="font-size:24px" class="fa">&#xf1c3;</i> </a>-->
+                <a href="/User/Export/Test/{{$UserIdetification->UserID}}/PRE" class="btn btn-success">
+                        Full-PRE-TEST Report <i style="font-size:24px" class="fa">&#xf1c3;</i></a>
                 </td>
                 <td>
-                    <a href="/User/Export/Test/{{$UserIdetification->UserID}}/PRE" class="btn btn-success">
-                        Full-PRE-TEST Report <i style="font-size:24px" class="fa">&#xf1c3;</i></a>
+                 
                 </td>
                 <td>
                     <a href="/User/Export/Test/{{$UserIdetification->UserID}}/POST" class="btn btn-success">
@@ -96,19 +95,16 @@ if($OpenButton=="1"){
                 </td>
             </tr>
             <tr>
-                <td>
-                    <a href="/User/Export/TestReport/{{$UserIdetification->UserID}}/PRE/1" class="btn btn-success">
-                        TEST-RECAP <i style="font-size:24px" class="fa">&#xf1c3;</i> </a>
+                <td >
+             
                 </td>
                 <td>
-                    <a href="/User/Export/TestReport/{{$UserIdetification->UserID}}/PRE/3"
-                        class="btn btn-success">COGNITIVE LEARNING QUESTIONNAIRE <i style="font-size:24px"
-                            class="fa">&#xf1c3;</i></a>
+                <a href="/User/Export/TestReport/{{$UserIdetification->UserID}}/PRE/1" class="btn btn-success">
+                    STRUCTURED KNOWLEDEGE QUESTIONNAIRE<i style="font-size:24px" class="fa">&#xf1c3;</i> </a>
                 </td>
                 <td>
-                    <a href="/User/Export/TestReport/{{$UserIdetification->UserID}}/PRE/4" class="btn btn-success"> CARE
-                        DECISIONS QUESTIONNAIRE <i style="font-size:24px" class="fa">&#xf1c3;</i></a>
                 </td>
+                
             </tr>
             <tr>
                 <td colspan="3">
@@ -118,16 +114,16 @@ if($OpenButton=="1"){
                 </td>
             </tr>
             <tr>
-
+            <td>
+                
+                </td>
                 <td>
                     <a href="/User/Export/TestReport/{{$UserIdetification->UserID}}/POST/3"
-                        class="btn btn-success">COGNITIVE LEARNING QUESTIONNAIRE <i style="font-size:24px"
+                        class="btn btn-success">STRUCTURED KNOWLEDEGE QUESTIONNAIRE <i style="font-size:24px"
                             class="fa">&#xf1c3;</i></a>
                 </td>
-                <td colspan="2">
-                    <center> <a href="/User/Export/TestReport/{{$UserIdetification->UserID}}/POST/4"
-                            class="btn btn-success"> CARE DECISIONS QUESTIONNAIRE <i style="font-size:24px"
-                                class="fa">&#xf1c3;</i></a> </center>
+                <td>
+                
                 </td>
             </tr>
             <tr>
@@ -144,8 +140,7 @@ if($OpenButton=="1"){
                 </td>
             </tr>
         </table>
-        <br /> <br />
-        <span style="float: right;"> Amita </span>
+ 
         </p>
         
         

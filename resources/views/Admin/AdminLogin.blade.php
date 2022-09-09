@@ -34,6 +34,7 @@
     <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!--//web-fonts-->
+    <link rel="stylesheet" href="/OuterArea/css/style.css" />
 </head>
 
 <body>
@@ -41,7 +42,7 @@
         <div class="container">
 
             <!-- main-heading -->
-            <h2 class="main-title-w3layouts mb-2 text-center text-white">Virtual Control Panel</h2>
+            <h2 class="main-title-w3layouts mb-2 text-center text-white">Admin Control Panel</h2>
             <!--// main-heading -->
             <div class="row">
                 <div class="col-md-3">
@@ -79,12 +80,12 @@
 
                 </div>
             </div>
-            <!-- Copyright -->
-            <div class="copyright-w3layouts py-xl-3 py-2 mt-xl-5 mt-4 text-center">
-                <p>© 2022 Learn Virtual India. All Rights Reserved
-                </p>
-            </div>
-            <!--// Copyright -->
+        <!-- Copyright -->
+    <div class="copyright-w3layouts py-xl-3 py-2 mt-xl-5 mt-4 text-center">
+        <p>© 2022 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur
+        </p>
+    </div>
+    <!--// Copyright -->
         </div>
     </div>
 
