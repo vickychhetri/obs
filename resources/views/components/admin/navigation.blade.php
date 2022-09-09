@@ -1,7 +1,7 @@
 <nav id="sidebar">
             <div class="sidebar-header">
                 <h1>
-                    <a href="/Dashboard">{{env("APPLICATION_NAME")}}</a>
+                    <a href="/Dashboard">Obstetrical</a>
                 </h1>
                 <span>OBS</span>
             </div>

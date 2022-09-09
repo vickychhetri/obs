@@ -1,7 +1,7 @@
 <nav id="sidebar" >
     <div class="sidebar-header" style="background-color:#030924;">
         <h1>
-            <a href="/UDashboard">{{env("APPLICATION_NAME")}}</a>
+            <a href="/UDashboard">Obstetrical</a>
         </h1>
         <span> 
         <i class="bi bi-journals"></i>
