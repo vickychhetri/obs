@@ -5,32 +5,21 @@
     <!-- <title> Register </title> -->
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Learn Virtual" />
-    <!-- Primary Meta Tags -->
-    <title>Online Learning Virtual Platform - Register</title>
-    <meta name="title" content="Online Learning Virtual  Platform - Register">
-    <meta name="description"
-        content="Cardiovascular system includes the way the heart processes oxygen and nutrients in the blood, which is called coronary circulation. The circulation system consists of coronary arteries and coronary veins.
-There are a range of disorders of the cardiovascular system that are treated and studied under the field of cardiology.">
+    <meta charset="utf-8" />
+        <meta name="keywords" content="obstetrical emergencies" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://learnvirtual.in/Register">
-    <meta property="og:title" content="Online Learning Virtual  Platform - Register">
-    <meta property="og:description"
-        content="Cardiovascular system includes the way the heart processes oxygen and nutrients in the blood, which is called coronary circulation. The circulation system consists of coronary arteries and coronary veins.
-There are a range of disorders of the cardiovascular system that are treated and studied under the field of cardiology.">
-    <meta property="og:image" content="https://learnvirtual.in/images/menu1.jpg">
+        <!-- Primary Meta Tags -->
+        <title>Obstetric Emergencies | Learning Platform </title>
+        <meta
+            name="title"
+            content="Obstetric Emergencies | Learning Platform"
+        />
+        <meta
+            name="description"
+            content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies."
+        />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://learnvirtual.in/Register">
-    <meta property="twitter:title" content="Online Learning Virtual  Platform - Register">
-    <meta property="twitter:description"
-        content="Cardiovascular system includes the way the heart processes oxygen and nutrients in the blood, which is called coronary circulation. The circulation system consists of coronary arteries and coronary veins.
-There are a range of disorders of the cardiovascular system that are treated and studied under the field of cardiology.">
-    <meta property="twitter:image" content="https://learnvirtual.in/images/menu1.jpg">
+ 
     <script>
     addEventListener("load", function() {
         setTimeout(hideURLbar, 0);
@@ -42,36 +31,15 @@ There are a range of disorders of the cardiovascular system that are treated and
     </script>
     <!-- //Meta Tags -->
 
-    <!-- Style-sheets -->
-    <!-- Bootstrap Css -->
-    <!-- <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
-    <!-- Bootstrap Css -->
-    <!-- Common Css -->
-    <!-- <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
-    <!--// Common Css -->
-    <!-- Fontawesome Css -->
-    <!-- <link href="/css/fontawesome-all.css" rel="stylesheet"> -->
-    <!--// Fontawesome Css -->
-    <!--// Style-sheets -->
+ 
 
     <!--web-fonts-->
     <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!--//web-fonts-->
     <!-- add icon link -->
-    <link rel="icon" href="/images/activity.svg" type="image/x-icon">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8C2J940E2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-Z8C2J940E2');
-    </script>
+    <link rel="icon" href="/images/mother.png" type="image/x-icon" />
+ 
       <link rel="stylesheet" href="/OuterArea/css/style.css" />
 </head>
 

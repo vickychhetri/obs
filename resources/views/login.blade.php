@@ -36,7 +36,7 @@
         </script>
         <!-- //Meta Tags -->
 
-        <link rel="icon" href="/images/activity.svg" type="image/x-icon" />
+        <link rel="icon" href="/images/mother.png" type="image/x-icon" />
 
         <!--web-fonts-->
         <link
