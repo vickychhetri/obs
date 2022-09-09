@@ -30,39 +30,20 @@
                <i>    • Don’t leave any question unanswered. </i>
             </li>
         </ul>
-<!--            <b style="colo:black;"> This learning program deals with cardiovascular disorders in children. The content is prepared for undergraduate nursing students.</b>  -->
-<!--            <hr> -->
-<!--             <br />-->
-<!--<h3> Algorithm/Steps </h3>-->
-<!--    <hr> -->
-<!--<ul style="font-weight:bold;">-->
-<!--    <li>-->
-<!--        1.) Pre-Test (can be attempted once only).-->
-<!--    </li>-->
-<!--    <li>-->
-<!--        2.) Five modules (Video) (can be run repeatedly).-->
-<!--    </li>-->
-<!--    <li>-->
-<!--       3.) Post-Test (Can be attempted once only).-->
-<!--    </li>-->
-   
-<!--</ul>-->
-
  
-       
-     <br/>
-<center> <img src="/images/IOs.drawio.png" style="max-width:100%;"/></center>
-<ul style="float:right;">
-          <br/>
-     
-     <ul>
+ 
+        <ul style="float:right;">
        <li> 
-     <a href="https://helpdesk.learnvirtual.in/" target="_blank" class="btn btn-danger"> Help Desk</a>
+     <a href="https://helpdesk.obstetricalemergencies.in/" target="_blank" class="btn btn-info"> Click Here for Help Desk</a>
      </li>
 </ul>
 
-        <br /> <br />
-        <span style="float: right;"> Amita </span>
+     <br/>
+<center> <img src="/images/obs.svg" style="max-width:100%;"/></center>
+ 
+     
+   
+         
         </p>
     </div>
     <!--// Error Page Info -->

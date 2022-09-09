@@ -113,7 +113,7 @@
             </a>
         </ul>
         <br /> <br />
-        <span style="float: right;"> Amita </span>
+    
         </p>
     </div>
     <!--// Error Page Info -->

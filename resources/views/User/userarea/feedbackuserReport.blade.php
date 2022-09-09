@@ -11,9 +11,9 @@
     <div class="outer-w3-agile mt-3">
         <p class="paragraph-agileits-w3layouts">
             <center>
-                <h3> UTILITY/ LEARNER SATISFACTION OPINIONNAIRE</h3>
+                <h3> Acceptability and Utility Opinionnaire</h3>
                 <br/>
-                <img src="/images/FEEDBACK.png" style="max-width: 100%;"/>
+                <img src="/images/feedbackObs.png" style="max-width: 100%;"/>
                 <br/><br/>
             </center>
         <ol>
@@ -37,8 +37,7 @@
             @endforeach
 
         </ol>
-        <br /> <br />
-        <span style="float: right;"> Amita </span>
+    
         </p>
     </div>
     <!--// Error Page Info -->

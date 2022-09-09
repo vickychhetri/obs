@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <!-- <title> Learn Virtual-Login </title> -->
+        <!-- Meta Tags -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,user-scalable=no"
+        />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="obstetrical emergencies" />
 
-<head>
-    <!-- <title> Learn Virtual-Login </title> -->
-    <!-- Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    <meta charset="utf-8">
-    <meta name="keywords" content="obstetrical emergencies" />
+        <!-- Primary Meta Tags -->
+        <title>Obstetric Emergencies | Learning Platform </title>
+        <meta
+            name="title"
+            content="Obstetric Emergencies | Learning Platform"
+        />
+        <meta
+            name="description"
+            content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies."
+        />
 
-    <!-- Primary Meta Tags -->
-    <title>Online Learning Platform - Login</title>
-    <meta name="title" content="Online Learning Virtual  Platform - Login">
-    <meta name="description"
-        content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
- 
+        <script>
+            addEventListener(
+                "load",
+                function () {
+                    setTimeout(hideURLbar, 0);
+                },
+                false
+            );
 
-    <script>
-    addEventListener("load", function() {
-        setTimeout(hideURLbar, 0);
-    }, false);
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+        </script>
+        <!-- //Meta Tags -->
 
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
-    </script>
-    <!-- //Meta Tags -->
-    <!-- add icon link -->
-    <link rel="icon" href="/images/activity.svg" type="image/x-icon">
+        <link rel="icon" href="/images/activity.svg" type="image/x-icon" />
 
-    <!-- Style-sheets -->
-    <!-- Bootstrap Css -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- Bootstrap Css -->
-    <!-- Common Css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!--// Common Css -->
-    <!-- Fontawesome Css -->
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <!--// Fontawesome Css -->
-    <!--// Style-sheets -->
+        <!--web-fonts-->
+        <link
+            href="//fonts.googleapis.com/css?family=Poiret+One"
+            rel="stylesheet"
+        />
+        <link
+            href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+            rel="stylesheet"
+        />
+        <!--//web-fonts-->
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!--web-fonts-->
-    <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!--//web-fonts-->
- 
-</head>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="/OuterArea/css/style.css" />
+    </head>
 
-<body>	 
-    <div class="bg-page py-5">
-        <div class="container">
+    <body>
+        <section class="ftco-section p-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section">
+                            Obstetrical Emergencies 
+                        </h2>
 
-            <!-- main-heading -->
-            <h2 class="mb-2 text-center text-white font-weight-bold" style="font-size:50px;font-family:times new roman;">Obstetrical Emergencies </h2>
-            <!--// main-heading -->
-            <div class="row">
-           
-               
-                <div class="col-md-6">
-
-                    <div class="form-body-w3-agile text-center w-lg-50 w-sm-75 w-100 mx-auto mt-5">
                         @if (session('message'))
                         <div class="alert alert-success">
                             {{ session('message') }}
@@ -70,69 +79,87 @@
                             {{ session('Error') }}
                         </div>
                         @endif
-
-                        <form action="/Login" method="post">
-                        <h3 class="text-center"> Sign In </h3>    <br/>
-                        {{csrf_field()}}
-                            <div class="form-group">
-                                <label>Email address</label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter email"
-                                    required="">
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Password"
-                                    required="">
-                            </div>
-                            <div class="d-sm-flex justify-content-between">
-                                <div class="form-check col-md-6 text-sm-left text-center">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                                </div>
-                                <div class="forgot col-md-6 text-sm-right text-center">
-                                    <!-- <a href="">forgot password?</a> -->
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary  mt-sm-5 mt-3 px-4">Login</button>
-                        </form>
-
-                        <p class="paragraph-agileits-w3layouts mt-4">Don't have an account
-                            <a href="/Register">Create an account</a>
-                        </p>
-                        <h1 class="paragraph-agileits-w3layouts mt-2">
-                            <a href="https://helpdesk.obstetricalemergencies.in/">Help Desk</a>
-                        </h1>
                     </div>
-
                 </div>
-        
-                <div class="col-md-6 d-flex justify-content-center align-items-center">
-                        <div>
-                                <h1 class="mb-2 text-center text-white font-weight-bold" style="font-size:50px;font-family:times new roman;"> </h1>
-                                <img src="/images/common/main.png"  class="w-100"/>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="login-wrap p-4 p-md-5 mb-5">
+                            <div
+                                class="icon d-flex align-items-center justify-content-center"
+                            >
+                                <span class="fa fa-user-o"></span>
+                            </div>
+                            <h3 class="text-center mb-4">Have an account?</h3>
+                 
+                                <form action="/Login" method="post" class="login-form">
+                                {{csrf_field()}}
+                                
+
+                                <div class="form-group">
+                                    <input
+                                        type="email"
+                                        class="form-control rounded-left"
+                                        placeholder="Email"
+                                        name="email" 
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group d-flex">
+                                    <input
+                                        type="password"
+                                        class="form-control rounded-left"
+                                        placeholder="Password"
+                                        name="password"
+                                        required
+                                    />
+                                </div>
+
+
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50">
+                                        <label
+                                            class="checkbox-wrap checkbox-primary"
+                                            >Remember Me
+                                            <input type="checkbox" checked />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="w-50 text-md-right">
+                                        <a href="/forgot">Forgot Password</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary rounded submit p-3 px-5"
+                                    >
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                   
+                      <center> 
+                        <h3 class="text-center">   </h3>
+                        <div class="" style="width:400px;max-width:100%;">
+                            <a href="/Register" class="btn btn-primary" > Create New Account</a>   <a href="https://helpdesk.obstetricalemergencies.in/" class="btn btn-primary" > Help Desk</a>
+                        </div>
+                      </center>
                     </div>
-
+                   
+                </div>
+               
             </div>
-            <!-- Copyright -->
-            <div class="copyright-w3layouts py-xl-3 py-2 mt-xl-5 mt-4 text-center">
-                <p>© 2022 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur
-                </p>
-            </div>
-            <!--// Copyright -->
-        </div>
+            
+        </section>
+    <!-- Copyright -->
+    <div class="copyright-w3layouts py-xl-3 py-2 mt-xl-5 mt-4 text-center">
+        <p>© 2022 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur
+        </p>
     </div>
-
-
-    <!-- Required common Js -->
-    <script src='js/jquery-2.2.3.min.js'></script>
-    <!-- //Required common Js -->
-
-    <!-- Js for bootstrap working-->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- //Js for bootstrap working -->
-
-</body>
-
+    <!--// Copyright -->
+        <!-- <script src="OuterArea/js/jquery.min.js"></script>
+  <script src="OuterArea/js/popper.js"></script>
+  <script src="OuterArea/js/bootstrap.min.js"></script>
+  <script src="OuterArea/js/main.js"></script> -->
+    </body>
 </html>

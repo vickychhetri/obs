@@ -129,7 +129,7 @@ div.h4 {
         <br /><br />
         <center> <a href="/User/Start-Course" class="btn btn-success"> GO TO NEXT</a> </center>
         <br /> <br />
-        <span style="float: right;"> Amita </span>
+      
         </p>
 
 

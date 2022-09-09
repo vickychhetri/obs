@@ -15,7 +15,7 @@
                     <br/>
                     <a href="/User/Tutorial/Watch/" class="btn btn-danger"> Go to Tutorials</a> </center>
                     <br/> <br/>
-                    <span style="float: right;"> Amita </span>
+                
                     </p>
                 </div>
                 <!--// Error Page Info -->

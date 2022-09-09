@@ -15,10 +15,10 @@
                      
                    <h3> All Test and Module Completed Successfuly !</h3> 
                    <h3> if need any kind of help, support and query you can contact me !</h3>    
-                 <h2> webamita5@gmail.com</h2>
+                 <h2> info@obstetricalemergencies.in</h2>
                    <h1> Thank You ! </h1> </center> 
                     <br/> <br/>
-                    <span style="float: right;"> Amita </span>
+           
                     </p>
                 </div>
                 <!--// Error Page Info -->
