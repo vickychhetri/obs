@@ -477,6 +477,18 @@ return $datasetComplete;
     public function reportGenerate($TestIDs,$TestType){
         $UserID=session()->get('userid');
 
+        // Code to check test is first or not if first no need to show report
+        $showcaluclatereport="0";
+        $showSeq=testseq::where('TestID','=',$TestIDs)
+        ->get()
+        ->first();
+        
+        if($showSeq->Sequence=="1"){
+        $showcaluclatereport="1";
+        }
+
+
+
         $ReportData=attempttest::where('TestType','=',$TestType)
         ->where('TestID','=',$TestIDs)
         ->where('UserID','=',$UserID)
@@ -530,6 +542,7 @@ return $datasetComplete;
         }
   
             $data=[
+                'ShowCalculatedReport'=>$showcaluclatereport,
                 'TestName' => $TestName->testName,
                 'TestDescription'=>$TestName->testDescription,
                 'TotalQuestion'=>$ReportData->count(),

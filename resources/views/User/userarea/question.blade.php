@@ -114,7 +114,7 @@ button:hover {
                     ?>
 
             </div>
-            <h4 class="mb-3">{{$QuestionOrder;}}). <?php echo nl2br($question->question); ?> </h4>
+            <p class="mb-3 h4" style="font-family:Open Sans; ">{{$QuestionOrder;}}). <?php echo nl2br($question->question); ?> </p>
             
                 <input type="hidden" name="question" value="{{$question->QuestionID}}" />
                 <div class="d-block my-3">

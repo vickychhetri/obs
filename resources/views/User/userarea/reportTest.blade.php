@@ -114,6 +114,24 @@ div.h4 {
 <!-- Error Page Content -->
 <div class="blank-page-content">
 
+
+
+        @if($TestReportDataset['ShowCalculatedReport']=="1")
+    <!-- Error Page Info -->
+    <div class="outer-w3-agile mt-3">
+    <br/>
+        <h3 class="text-center">
+
+                Thank You !
+                </h3> 
+                <br/>
+                <br/> 
+                <center> <a href="/User/Start-Course" class="btn btn-success m-5"> GO TO NEXT</a> </center>
+            </div>
+                
+        @else
+
+
     <!-- Error Page Info -->
     <div class="outer-w3-agile mt-3">
         <p class="paragraph-agileits-w3layouts">
@@ -195,6 +213,11 @@ div.h4 {
 
 
     </div>
+
+
+
+
+@endif
 
 </div>
 </div>
