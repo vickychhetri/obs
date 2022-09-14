@@ -50,7 +50,7 @@
             <ul class="collapse list-unstyled" id="SupportTeam">
           
                 <li>
-                    <a href="https://helpdesk.learnvirtual.in/">Help Desk</a>
+                    <a href="https://helpdesk.obstetricalemergencies.in/">Help Desk</a>
                 </li>
             </ul>
         </li>
