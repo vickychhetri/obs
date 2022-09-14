@@ -48,7 +48,9 @@ class userdasboard extends Controller
                     // check here of post test completed than redirect to display message 
                 }
             }else {
-                return redirect('/User/Tutorial/Watch/');   
+                    // close till video not received
+                // return redirect('/User/Tutorial/Watch/');  
+                return redirect('/User/list-Test'); 
             }
                  
                 }
