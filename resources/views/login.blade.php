@@ -25,21 +25,21 @@
         <title>Obstetric Emergencies | Learning Platform</title>
         <meta name="title" content="Obstetric Emergencies | Learning Platform">
         <meta name="description" content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
-        
+
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://obstetricalemergencies.in/">
         <meta property="og:title" content="Obstetric Emergencies | Learning Platform">
         <meta property="og:description" content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
         <meta property="og:image" content="https://obstetricalemergencies.in/images/mother.png">
-        
+
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://obstetricalemergencies.in/">
         <meta property="twitter:title" content="Obstetric Emergencies | Learning Platform">
         <meta property="twitter:description" content="Obstetric emergencies are health problems that are life-threatening for pregnant women and their babies.">
         <meta property="twitter:image" content="https://obstetricalemergencies.in/images/mother.png">
-        
+
         <script>
             addEventListener(
                 "load",
@@ -85,7 +85,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 text-center mb-5">
                         <h2 class="heading-section">
-                            Obstetrical Emergencies 
+                            Obstetrical Emergencies
                         </h2>
 
                         @if (session('message'))
@@ -109,17 +109,17 @@
                                 <span class="fa fa-user-o"></span>
                             </div>
                             <h3 class="text-center mb-4">Have an account?</h3>
-                 
+
                                 <form action="/Login" method="post" class="login-form">
                                 {{csrf_field()}}
-                                
+
 
                                 <div class="form-group">
                                     <input
                                         type="email"
                                         class="form-control rounded-left"
                                         placeholder="Email"
-                                        name="email" 
+                                        name="email"
                                         required
                                     />
                                 </div>
@@ -157,22 +157,22 @@
                                 </div>
                             </form>
                         </div>
-                      <center> 
+                      <center>
                         <h3 class="text-center">   </h3>
                         <div class="" style="width:400px;max-width:100%;">
                             <a href="/Register" class="btn btn-primary" > Create New Account</a>   <a href="https://helpdesk.obstetricalemergencies.in/" class="btn btn-primary" > Help Desk</a>
                         </div>
                       </center>
                     </div>
-                   
+
                 </div>
-               
+
             </div>
-            
+
         </section>
     <!-- Copyright -->
     <div class="copyright-w3layouts py-xl-3 py-2 mt-xl-5 mt-4 text-center">
-        <p>© 2022 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur
+        <p>© 2024 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur  <a href="/privacy-policy"> Privacy Policy</a>
         </p>
     </div>
     <!--// Copyright -->
