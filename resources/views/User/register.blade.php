@@ -41,7 +41,7 @@
 <meta property="twitter:image" content="https://obstetricalemergencies.in/images/mother.png">
 
 
- 
+
     <script>
     addEventListener("load", function() {
         setTimeout(hideURLbar, 0);
@@ -53,7 +53,7 @@
     </script>
     <!-- //Meta Tags -->
 
- 
+
 
     <!--web-fonts-->
     <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -61,7 +61,7 @@
     <!--//web-fonts-->
     <!-- add icon link -->
     <link rel="icon" href="/images/mother.png" type="image/x-icon" />
- 
+
       <link rel="stylesheet" href="/OuterArea/css/style.css" />
 </head>
 
@@ -71,7 +71,7 @@
             <div class="container">
                 <div class="row justify-content-center p-0">
                     <div class="col-md-6 text-center p-0">
-                     
+
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -80,7 +80,7 @@
                                                 <div class="text-center m-2">
 
                                                             <h2 class="heading-section bg-primary text-white rounded" >
-                                                               Registration Form 
+                                                               Registration Form
                                                             </h2>
 
                                                             @if (session('message'))
@@ -157,27 +157,26 @@
                                 </span>
                             </div>
                             <button type="submit"
-                                class="btn btn-primary btn-block error-w3l-btn mt-sm-5 mt-3 px-4">Submit</button>  
+                                class="btn btn-primary btn-block error-w3l-btn mt-sm-5 mt-3 px-4">Submit</button>
                         </form>
-                               
+
                         </div>
-                      <center> 
+                      <center>
                         <h3 class="text-center">   </h3>
                         <div class="" style="width:400px;max-width:100%;">
-                            <a href="/" class="btn btn-primary" > Back to Login</a> 
+                            <a href="/" class="btn btn-primary" > Back to Login</a>
                         </div>
                       </center>
                     </div>
-                   
+
                 </div>
-               
+
             </div>
-            
+
         </section>
     <!-- Copyright -->
     <div class="copyright-w3layouts py-xl-3 py-2 mt-xl-5 mt-4 text-center">
-        <p>© 2022 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur
-        </p>
+        <p>© 2024 Learn Obstetrical Emergencies . All Rights Reserved | Develop by Simarjeet Kaur  <a href="/privacy-policy"> Privacy Policy</a>
     </div>
 
 
@@ -199,7 +198,7 @@
 
 
 
- 
+
 
 </body>
 
