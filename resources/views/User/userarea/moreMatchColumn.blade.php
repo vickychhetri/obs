@@ -17,7 +17,7 @@
     <!-- Error Page Info -->
     <div class="outer-w3-agile mt-3">
         <p class="paragraph-agileits-w3layouts">
-            <?php 
+            <?php
         $z=1;
         ?>
             <center>
@@ -26,7 +26,7 @@
         <form action="/User/Moudle23/Test" method="post">
             <!-- <input type="hidden" value="{{$UserID}}" name="parameter2" />  -->
             {{csrf_field()}}
-            <?php 
+            <?php
             $Z=1;
             ?>
             <input type="hidden" value="{{$ModuleQuestion->count()}}" name="parameter0" />
@@ -34,7 +34,7 @@
             <input type="hidden" value="{{$UserID}}" name="parameter2" />
 
             @foreach($ModuleQuestion as $question)
-            <div style="background-color:#0082ba;color:white;padding:16px;">
+            <div style="padding:16px;">
                 <input type="hidden" value="{{$question->id}}" name="question{{$Z++}}" />
                 <span style="float: right;">
                     <select class="form-control" style="color:black;" name="answer{{$question->id}}">
@@ -51,7 +51,7 @@
 
         </form>
         <br /> <br />
-     
+
         </p>
     </div>
     <!--// Error Page Info -->

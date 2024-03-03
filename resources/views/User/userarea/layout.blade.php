@@ -40,7 +40,7 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--//web-fonts-->
- 
+
     <style>
     #nav ul {
         margin-top: 0;
@@ -52,7 +52,7 @@
 
 <body >
     <div class="pagecontainer ">
-        
+
     <div class="wrapper"  >
         <!-- Sidebar Holder -->
         <x-User.Navigation />
@@ -161,16 +161,16 @@
       </div>
     @section("footerContainer")
     @show
-   
+
     <noscript>
     <style type="text/css">
         .pagecontainer {display:none;}
     </style>
-    
+
     <div class="noscriptmsg">
         <br/>
         <br/>
-        <center> 
+        <center>
     You don't have javascript enabled.  Good luck with that or Enable Sites can use Javascript.
      </center>
     </div>

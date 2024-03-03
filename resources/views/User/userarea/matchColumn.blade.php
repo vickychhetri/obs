@@ -17,7 +17,7 @@
     <!-- Error Page Info -->
     <div class="outer-w3-agile mt-3">
         <p class="paragraph-agileits-w3layouts">
-        <?php 
+        <?php
         $z=1;
         ?>
             <center>
@@ -25,19 +25,19 @@
             </center>
         <form action="/User/Moudle/Test" method="post">
             {{csrf_field()}}
-            <?php 
+            <?php
             $Z=1;
             ?>
             <input type="hidden" value="{{$ModuleQuestion->count()}}" name="parameter0" />
             <input type="hidden" value="{{$TYPE}}" name="parameter1" />
-           <input type="hidden" value="{{$UserID}}" name="parameter2" /> 
+           <input type="hidden" value="{{$UserID}}" name="parameter2" />
            @foreach($ModuleQuestion as $question)
-            <div style="background-color:#0082ba;color:white;padding:16px;">
-            <input type="hidden" value="{{$question->id}}" name="question{{$Z++}}" />   
+            <div style="padding:16px;">
+            <input type="hidden" value="{{$question->id}}" name="question{{$Z++}}" />
                 <span style="float: right;">
                     <select class="form-control" style="color:black;" name="answer{{$question->id}}" required>
                         <option value="">-</option>
-                        <?php 
+                        <?php
                         for($i=0;$i<$OptionSize;$i++){
                             ?>
                         <option value="{{$i+1}}">{{$OPTIONS[$i]}}</option>
@@ -47,13 +47,18 @@
                     </select>
                 </span>
                 <h4>{{$z++}}). {{$question->ASection}} </h4>
+                <hr/>
             </div>
             @endforeach
-            <center> <input type="submit" value="Submit" class="btn btn-success btn btn-block" /> </center>
+            <center>
+                <input type="submit" value="Submit" class="btn btn-success" />
+                <input type="Reset" value="Reset" class="btn btn-default" />
+
+            </center>
 
         </form>
         <br /> <br />
-      
+
         </p>
     </div>
     <!--// Error Page Info -->

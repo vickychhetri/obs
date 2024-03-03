@@ -137,7 +137,7 @@ Route::get('/User/Test/reportAfterTest/{TestIDs}/{TestType}', 'App\Http\Controll
 
 Route::get('/User/Test/InCompleteAttemptTest/{TestIDs}', 'App\Http\Controllers\AttempttestController@TestNotAttempt_Incomplete');
 
-Route::get('/User/Tutorial/Watch/', 'App\Http\Controllers\Watchtutorial@StartVideoCourse');
+    Route::get('/User/Tutorial/Watch/', 'App\Http\Controllers\Watchtutorial@StartVideoCourse');
 Route::get('/User/Tutorials/Watch/{VideoIDs}', 'App\Http\Controllers\Watchtutorial@LaunchVideo');
 
 

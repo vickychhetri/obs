@@ -41,7 +41,7 @@ class Watchtutorial extends Controller
 
     public function UnlockVideo($Type,$VideoIDs,$UserID){
         $obj= new Watchtutorial;
-        if(isset($VideoIDs)){ 
+        if(isset($VideoIDs)){
         $unLockStatus=$obj->IsVideoUnLocked($Type,$VideoIDs,$UserID);
 
         if($unLockStatus==null){
@@ -69,7 +69,7 @@ class Watchtutorial extends Controller
     }
         return false;
     }
-    
+
 
     public function UnlockNextVideo($Type,$VideoIDs,$UserID){
         $obj= new Watchtutorial;
@@ -118,48 +118,48 @@ class Watchtutorial extends Controller
        return null;
     }
     public function IsVideoComplete($VideoIDs,$UserID){
-        
+
         $VideoStatus=Videocomplete::where('VideoID','=',$VideoIDs)
         ->where('UserID','=',$UserID)
         ->get()
         ->first();
         if(isset($VideoStatus))
         return $VideoStatus->Complete;
-        else 
+        else
         return null;
     }
 
     // public function index($VideoIDs){
-     
+
     // }
 
     public function WhatIsMyVideoToWatch($UserID){
         $obj= new Watchtutorial;
-      
+
         $WatchStatus=Videocomplete::where('UserID','=',$UserID)
         ->where('Complete','=','1')->get();
-        
+
         $oldervideo=$obj->FirstSequenceVideo();
         $data[0]=$oldervideo;
         $data[1]=$oldervideo;
 
         if($WatchStatus->count()>0){
             $MAX=$obj->MaxmiumVideos();
-    
+
             for($i=1;$i<=$MAX;$i++){
                 $Video=$obj->SequenceNoToVideo($i);
 
                 $data[0]=$oldervideo;
                 $data[1]=$Video;
-                
+
                 $VideoStatus=Videocomplete::where('UserID','=',$UserID)
                 ->where('Complete','=','1')->where('VideoID','=',$Video)->get();
- 
-                if(isset($VideoStatus)){ 
+
+                if(isset($VideoStatus)){
                     if($VideoStatus->count()<1){
                         return $data;
                     }
-                   
+
                 }
                 $oldervideo= $Video;
             }
@@ -185,9 +185,13 @@ class Watchtutorial extends Controller
             }else{
                    $VideoIDs=$VideoIDData[0];
             }
-          
+
         }else {
             $VideoIDs=$VideoIDData[0];
+        }
+
+        if($VideoIDs>3){
+            $VideoIDs=3;
         }
         // $obj->index($VideoIDs); // play
 
@@ -196,7 +200,7 @@ class Watchtutorial extends Controller
         if($VideoIDs!=null){
             if($obj->IsVideoUnLocked('1',$VideoIDs,$UserID)=="1"){
                 $SeekPointVideo = Cache::get($VideoIDs."@".$UserID,'0');
-                $VIDEOALL=videoModule::all();
+                $VIDEOALL=videoModule::where('VideoID','<=',3)->get();
                 $a=$obj->findLockUnlockArray($VIDEOALL);
                 $VIDEO=videoModule::where('VideoID','=',$VideoIDs)->get()->first();
                 return view('User.userarea.tutorial')
@@ -226,7 +230,7 @@ public function findLockUnlockArray($VIDEOALL){
     }
 return $a;
 }
-    
+
     public function LaunchVideo($VideoIDs){
         $UserID=session()->get('userid');
         $obj=new Watchtutorial;
@@ -234,7 +238,7 @@ return $a;
         if($VideoIDs!=null){
             if($obj->IsVideoUnLocked('1',$VideoIDs,$UserID)=="1"){
                 $SeekPointVideo = Cache::get($VideoIDs."@".$UserID,'0');
-                $VIDEOALL=videoModule::all();              
+                $VIDEOALL=videoModule::where('VideoID','<=',3)->get();
                 $a=$obj->findLockUnlockArray($VIDEOALL);
                 $VIDEO=videoModule::where('VideoID','=',$VideoIDs)->get()->first();
                 return view('User.userarea.tutorial')
@@ -255,7 +259,7 @@ public function LaunchVideoPrevious($VideoIDs){
         $currentSquence=$obj->VideoToSequenceNo($VideoIDs);
         if($currentSquence>1)
             $currentSquence=$currentSquence-1;
-            else 
+            else
             $currentSquence=1;
      $Video=Videoseq::where('Sequence','=',$currentSquence)->get()->first();
      return redirect('/User/Tutorials/Watch/'.$Video->VideoID);
@@ -263,21 +267,21 @@ public function LaunchVideoPrevious($VideoIDs){
 public function LaunchVideoNext($VideoIDs){
     $obj= new Watchtutorial;
     $MAX=$obj->MaxmiumVideos();
-    
+
     $currentSquence=$obj->VideoToSequenceNo($VideoIDs);
     if($currentSquence<$MAX){
         $currentSquence=$currentSquence+1;
     }
     else{
         return redirect('/User/Start-Course');
-    } 
+    }
     // $currentSquence=$MAX;
-    
+
     $Video=Videoseq::where('Sequence','=',$currentSquence)->get()->first();
          return redirect('/User/Tutorials/Watch/'.$Video->VideoID);
 
 }
 
 
-    
+
 }

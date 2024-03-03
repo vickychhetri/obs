@@ -16,18 +16,18 @@ class userdasboard extends Controller
 {
     public function index()
     {
-            return view('User.userarea.dashboard');      
+            return view('User.userarea.dashboard');
     }
     public function demographics(){
-        return view('User.userarea.demographic');     
+        return view('User.userarea.demographic');
     }
 
     public function courseStart(){
         $UserID=session()->get('userid');
         $database_agent2= Demogra::where('UserID','=',$UserID)->get()->first();
-        
+
         if($database_agent2){
-        
+
             $coursestepStatus=Maincoursestep::where('UserID','=',$UserID)
         ->where('Step','=','1')->where('Complete','=','1')
         ->get()
@@ -43,36 +43,36 @@ class userdasboard extends Controller
             if(isset($coursestepStatus)){
                 // if video section also completed than open Post Test Section
                 if($coursestepStatus->Complete=="1"){
-                   
+
                     return redirect('/User/list-Test');
-                    // check here of post test completed than redirect to display message 
+                    // check here of post test completed than redirect to display message
                 }
             }else {
                     // close till video not received
-                // return redirect('/User/Tutorial/Watch/');  
-                return redirect('/User/list-Test'); 
+                 return redirect('/User/Tutorial/Watch/');
+                //return redirect('/User/list-Test');
             }
-                 
+
                 }
             }else {
                 return redirect('/User/list-Test');
 
-                
+
 
 
             }
 
 
         }
-       
-        return view('User.userarea.demographic');     
-    // check if form fill or not 
+
+        return view('User.userarea.demographic');
+    // check if form fill or not
      // if form filled than start course sequence
-     // if already started move to that section 
+     // if already started move to that section
     }
     public function openTestReportList(){
         $data=testModule::where('ChapterID','=','1')->get();
         return view('User.userarea.viewTest')
-        ->with('Tests',$data);  
+        ->with('Tests',$data);
     }
 }

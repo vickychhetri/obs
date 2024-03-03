@@ -46,11 +46,11 @@ video {
 
                         <div class="dash-video-player " style="padding: 0;">
                             <div class="videoContainer" id="videoContainer" style="padding: 0;">
-                                <div class="embed-responsive embed-responsive-4by3" id="video_container" style="border:2px solid black;border-bottom:2px solid black;box-shadow: 2px 2px 5px 13px rgba(0,0,0,1);
--webkit-box-shadow: 2px 2px 5px 13px rgba(0,0,0,1);
--moz-box-shadow: 2px 2px 5px 13px rgba(0,0,0,1);">
+                                <div class="embed-responsive embed-responsive-16by9" id="video_container" style="border:2px solid black;border-bottom:2px solid black;box-shadow: 1px 1px 2px 5px rgba(0,0,0,1);
+-webkit-box-shadow: 1px 1px 2px 5px rgba(0,0,0,1);
+-moz-box-shadow: 1px 1px 2px 13px rgba(0,0,0,1);">
                                     <video id="CurrentVideoMain" data-dashjs-player autoplay controls></video>
-                               
+
                                 </div>
 
                             </div>
@@ -69,30 +69,15 @@ video {
                     </div>
                     <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top: 16px;;">
                         <hr />
-                        <h2> {{$VideoModule->videoTitle}} </h2>
+                        <h2><b> {{$VideoModule->videoTitle}}  </b></h2>
                         <hr />
+                        <style>
+                            p {
+                                text-align: justify;
+                            }
+                        </style>
                         <p style="text-align: justify;">
-
-                        <div id="accordion">
-                            <div class="card">
-                                <div id="headingOne">
-                                    <!-- <h5 class="mb-0"> -->
-                                    <p data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">
-                                        {{$VideoModule->videoDescription}}
-                                    </p>
-                                    <!-- </h5> -->
-                                </div>
-
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        {{$VideoModule->videoDescription}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                            {!! $VideoModule->videoDescription !!}
                         </p>
 
                 </div>
@@ -232,9 +217,9 @@ $(document).ready(function() {
     init();
     var currentVideo = document.getElementById('CurrentVideoMain');
     if("{{$VideoModule->VideoID}}"!="5"){
-        vid_listen();   
+        vid_listen();
     }
-     
+
 });
 var player;
 var controlbar;
@@ -293,15 +278,15 @@ function vid_listen() {
         }
     });
     // prevent user from seeking
-    video.addEventListener('seeking', function() {
-        var delta = video.currentTime - timeTracking.watchedTime;
-        if (delta > 0) {
-            video.pause();
-            //play back from where the user started seeking after rewind or without rewind
-            video.currentTime = timeTracking[lastUpdated];
-            video.play();
-        }
-    });
+    // video.addEventListener('seeking', function() {
+    //     var delta = video.currentTime - timeTracking.watchedTime;
+    //     if (delta > 0) {
+    //         video.pause();
+    //         //play back from where the user started seeking after rewind or without rewind
+    //         video.currentTime = timeTracking[lastUpdated];
+    //         video.play();
+    //     }
+    // });
     video.addEventListener("ended", function() {
         // here the end is detected
         console.log("The video has ended");
