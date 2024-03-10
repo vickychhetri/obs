@@ -29,7 +29,7 @@ class AjaxController extends Controller
          return response()->json(['success'=>'done']);
     }
     public function storeComplete(Request $request)
-    { 
+    {
         try {
 
         $videoCodeSe=0;
@@ -52,12 +52,12 @@ class AjaxController extends Controller
             $obkAgent->Complete=$complete;
             $obkAgent->save();
         }
-    
+
         // unlock next one
         $obj= new Watchtutorial;
         $currentSquence=$obj->VideoToSequenceNo($VideoID);
 
-          // video complete than unlock next small test module 
+          // video complete than unlock next small test module
           $agentSimpleTestStatus=new LockunlocksimpletestController;
               $TypeMode=AjaxController::currenVideoTOModuleTest($currentSquence);
               if($TypeMode!=0){
@@ -65,7 +65,7 @@ class AjaxController extends Controller
             }
 
         $currentSquence+=1;
-        
+
         $Video=Videoseq::where('Sequence','=',$currentSquence)->get()->first();
         if(isset($Video)){
             // $videoCodeSe=1;
@@ -92,13 +92,13 @@ class AjaxController extends Controller
         }
 
         Cache::forget($key);  // forgot history of timer video resume
-        
+
         // step to find all video complete or not
         $Video=Videoseq::all();
         $TestComplete=1;
         foreach($Video as $v){
             $status=$obj->IsVideoComplete($v->VideoID,$UserID);
-           
+
             if(!isset($status)){
                 $TestComplete=0;
             }
@@ -119,7 +119,7 @@ class AjaxController extends Controller
             if(isset($mainCourseStepVideo)){
              $mainCourseStepVideo->Complete="1";
             $mainCourseStepVideo->save();
-            }else{  
+            }else{
                 $agentUpdatingStep=new Maincoursestep;
                 $agentUpdatingStep->Step="3";
                 $agentUpdatingStep->Complete="1";
@@ -132,7 +132,7 @@ class AjaxController extends Controller
             // unlock post test
             // $TestMode=$obj->findStep();
             // $UserDash=new TestseqController();
-            // $testID=$UserDash->SecondTestSequence(); // find the first test 
+            // $testID=$UserDash->SecondTestSequence(); // find the first test
             // $exam= new AttempttestController;
             // $exam->TestLocked($testID,"2","1"); // open post test
         }
@@ -150,11 +150,13 @@ class AjaxController extends Controller
     switch($currentSquence){
         case "1":
          return 1;
+        case "2":
+            return 2;
          case "3":
-         return 2;
+         return 3;
          case "4":
-         return "3";
-         case "6":
+         return "4";
+         case "5":
          return "5";
          default:
          return 0;
@@ -163,7 +165,7 @@ class AjaxController extends Controller
 
  //Admin Section to unlock Post test
  public function OpenPosttest($UserID){
-    // this fucntion only work if post test open and status 
+    // this fucntion only work if post test open and status
     //is not change or button not prrssed.
     $res_Agent_check = DB::table('postactivateds')
     ->where('UserID', '=', $UserID)
@@ -178,7 +180,7 @@ class AjaxController extends Controller
     $TestComplete=1;
     foreach($Video as $v){
         $status=$obj->IsVideoComplete($v->VideoID,$UserID);
-       
+
         if(!isset($status)){
             $TestComplete=0;
         }
@@ -191,7 +193,7 @@ class AjaxController extends Controller
 
     if($TestComplete==1){
     $UserDash=new TestseqController();
-    $testID=$UserDash->SecondTestSequence(); // find the first test 
+    $testID=$UserDash->SecondTestSequence(); // find the first test
     $PostTest= new AjaxController();
     $PostTest->TestLocked($UserID,$testID,"2","1"); // open post test
 
@@ -210,18 +212,18 @@ class AjaxController extends Controller
             'Message' => 'Already Activated',
             'UserID'=>$UserID,
             'created_at'=>$dateSubmit,
-            'updated_at'=>$dateSubmit 
+            'updated_at'=>$dateSubmit
         ]);
     }
     // echo "true end";
         //button press and return null
-    return redirect()->back()->with("message","Done");    
+    return redirect()->back()->with("message","Done");
         }
     }
     // echo "End ";
     // if already pressed
 // return false;
-return redirect()->back()->with("Error","Sorry ");    
+return redirect()->back()->with("Error","Sorry ");
  }
 public function VideoCOmpleted($UserID){
     $obj= new Watchtutorial;
@@ -229,7 +231,7 @@ public function VideoCOmpleted($UserID){
     $TestComplete=1;
     foreach($Video as $v){
         $status=$obj->IsVideoComplete($v->VideoID,$UserID);
-       
+
         if(!isset($status)){
             $TestComplete=0;
         }
@@ -265,7 +267,7 @@ return $TestComplete;
          $agentValue->ContentType=$type;
          $agentValue->ContentID=$testID;
          $agentValue->unLock=$lock;
-         $agentValue->UserID=$UserID; 
+         $agentValue->UserID=$UserID;
          $res=$agentValue->save();
      }
      if($res=='1'){
@@ -273,6 +275,6 @@ return $TestComplete;
      }
      return false;
  }
- 
+
 
 }

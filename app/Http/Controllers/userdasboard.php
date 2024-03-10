@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Datapasslog;
 use App\Models\Maincoursestep;
 use App\Models\testModule;
 
@@ -75,4 +76,12 @@ class userdasboard extends Controller
         return view('User.userarea.viewTest')
         ->with('Tests',$data);
     }
+
+    public function openTestVideoReportList(){
+        $UserID = session()->get('userid');
+        $data=Datapasslog::where('UserID','=',$UserID)->orderBy('created_at')->get();
+        return view('User.userarea.viewVideoTest')
+            ->with('Tests',$data);
+    }
+
 }

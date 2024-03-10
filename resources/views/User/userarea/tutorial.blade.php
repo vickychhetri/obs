@@ -199,8 +199,9 @@ function completeVideo(a, b, c) {
             console.log(response);
             if (response) {
                 $('.success').text(response.success);
+               console.log(response.success);
                 if (response.success != "0" && response.success != "2" && response.success != "3") {
-                    window.location.replace("/User/Moudle/Test/" + response.success);
+                     window.location.replace("/User/Moudle23/Test/" + response.success);
                 }
                 else  if (response.success != "0" && response.success != "1" && response.success != "5") {
                     window.location.replace("/User/Moudle23/Test/" + response.success);
@@ -278,15 +279,15 @@ function vid_listen() {
         }
     });
     // prevent user from seeking
-    // video.addEventListener('seeking', function() {
-    //     var delta = video.currentTime - timeTracking.watchedTime;
-    //     if (delta > 0) {
-    //         video.pause();
-    //         //play back from where the user started seeking after rewind or without rewind
-    //         video.currentTime = timeTracking[lastUpdated];
-    //         video.play();
-    //     }
-    // });
+    video.addEventListener('seeking', function() {
+        var delta = video.currentTime - timeTracking.watchedTime;
+        if (delta > 0) {
+            video.pause();
+            //play back from where the user started seeking after rewind or without rewind
+            video.currentTime = timeTracking[lastUpdated];
+            video.play();
+        }
+    });
     video.addEventListener("ended", function() {
         // here the end is detected
         console.log("The video has ended");

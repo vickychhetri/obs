@@ -3,7 +3,7 @@
         <h1>
             <a href="/UDashboard">{{ env('APPLICATION_NAME') }}</a>
         </h1>
-        <span> 
+        <span>
         <i class="bi bi-journals"></i>
         </span>
     </div>
@@ -39,6 +39,9 @@
                 <li>
                     <a href="/User/View/Test">Test</a>
                 </li>
+                <li>
+                    <a href="/User/View/Video/Test">Video Test</a>
+                </li>
             </ul>
         </li>
         <li>
@@ -48,7 +51,7 @@
                 <i class="fas fa-angle-down fa-pull-right"></i>
             </a>
             <ul class="collapse list-unstyled" id="SupportTeam">
-          
+
                 <li>
                     <a href="https://helpdesk.obstetricalemergencies.in/">Help Desk</a>
                 </li>

@@ -165,6 +165,7 @@ Route::get('/User/Tutorial/Watch/Previous/{VideoIDs}', 'App\Http\Controllers\Wat
 Route::get('/User/Tutorial/Watch/Next/{VideoIDs}', 'App\Http\Controllers\Watchtutorial@LaunchVideoNext');
 
 Route::get('/User/View/Test', 'App\Http\Controllers\userdasboard@openTestReportList');
+    Route::get('/User/View/Video/Test', 'App\Http\Controllers\userdasboard@openTestVideoReportList');
 
 Route::get('/User/Feedback', 'App\Http\Controllers\UserfeedbackController@index');
 Route::post('/User/Feedback', 'App\Http\Controllers\UserfeedbackuserController@store');

@@ -129,7 +129,7 @@ div.h4 {
         <br /><br />
         <center> <a href="/User/Start-Course" class="btn btn-success"> GO TO NEXT</a> </center>
         <br /> <br />
-      
+
         </p>
 
 
@@ -199,7 +199,7 @@ div.h4 {
                 <?php
                 $count=1; ?>
                 @foreach($TestReportDataset['QuestionTestReport'] as $questionBank)
-                <div class="col-md-12">
+                <div class="col-md-12 mb-2">
                     <div
                         style="border:1px solid black;padding:16px;background-color:{{$questionBank['AnswerCorrect']==0? '#ffd6d6':'#e8ffe6'}}">
                         <h2>{{$count++}}). {{$questionBank['Question']}}</h2>
