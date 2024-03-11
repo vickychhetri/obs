@@ -279,15 +279,15 @@ function vid_listen() {
         }
     });
     // prevent user from seeking
-    // video.addEventListener('seeking', function() {
-    //     var delta = video.currentTime - timeTracking.watchedTime;
-    //     if (delta > 0) {
-    //         video.pause();
-    //         //play back from where the user started seeking after rewind or without rewind
-    //         video.currentTime = timeTracking[lastUpdated];
-    //         video.play();
-    //     }
-    // });
+    video.addEventListener('seeking', function() {
+        var delta = video.currentTime - timeTracking.watchedTime;
+        if (delta > 0) {
+            video.pause();
+            //play back from where the user started seeking after rewind or without rewind
+            video.currentTime = timeTracking[lastUpdated];
+            video.play();
+        }
+    });
     video.addEventListener("ended", function() {
         // here the end is detected
         console.log("The video has ended");
